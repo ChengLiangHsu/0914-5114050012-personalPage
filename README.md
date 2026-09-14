@@ -2,6 +2,8 @@
 
 這是 **Cheng-Liang Hsu (許丞諒)** 的個人作品集與履歷網站專案。
 
+🔗 **線上展示網址 (GitHub Pages)**：[https://chenglianghsu.github.io/0914-5114050012-personalPage/](https://chenglianghsu.github.io/0914-5114050012-personalPage/)
+
 ## 專案簡介
 
 本專案採用純原生技術（Vanilla HTML5、CSS3、JavaScript ES6+）打造，無須繁瑣框架與建置步驟即可快速預覽與部署。
