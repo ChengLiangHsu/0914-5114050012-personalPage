@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cheng-Liang Hsu (許丞諒) 的個人作品集與履歷網站。專業全端開發、現代化網頁設計、UI/UX 互動架構與創新軟體解決方案。">
+  <meta name="keywords" content="Cheng-Liang Hsu, 許丞諒, 個人網頁, 作品集, 全端工程師, 前端工程師, 履歷, Portfolio">
+  <meta name="author" content="Cheng-Liang Hsu">
+  <meta property="og:title" content="Cheng-Liang Hsu | 個人作品集 & 軟體工程師">
+  <meta property="og:description" content="探索 Cheng-Liang Hsu 的精選專案、專業技能與開發歷程。">
+  <meta property="og:type" content="website">
+  
+  <title>Cheng-Liang Hsu | 個人作品集 & 軟體工程師</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 背景動態流光光暈 (Ambient Glowing Blobs) -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- 導覽列 (Navigation Bar) -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" id="brand-logo" aria-label="回到首頁">
+        <span class="brand-code">&lt;CLH/&gt;</span>
+        <span class="brand-name">Cheng-Liang</span>
+      </a>
+
+      <!-- 桌面版選單 -->
+      <nav class="nav-menu" id="nav-menu" aria-label="主要導覽">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">關於我</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">專業技能</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">精選作品</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">學經歷</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">聯絡我</a></li>
+        </ul>
+      </nav>
+
+      <!-- 工具按鈕組 -->
+      <div class="nav-actions">
+        <!-- 主題切換按鈕 -->
+        <button id="theme-toggle" class="btn-icon" aria-label="切換深色/淺色主題" title="切換深/淺色模式">
+          <!-- 太陽圖標 (淺色) -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- 月亮圖標 (深色) -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- 行動版漢堡按鈕 -->
+        <button id="mobile-toggle" class="btn-icon mobile-toggle" aria-label="開啟選單" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首頁橫幅 (Hero Section) -->
+    <section class="section hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge" id="hero-badge">
+            <span class="badge-dot"></span>
+            <span>開放多元合作與開發機會 / Open to Opportunities</span>
+          </div>
+          
+          <h1 class="hero-title">
+            嗨，我是 <span class="gradient-text">許丞諒</span>
+            <span class="hero-subname">Cheng-Liang Hsu</span>
+          </h1>
+
+          <p class="hero-role">
+            <span class="code-bracket">&lt;</span>
+            <span class="typing-text" id="typing-text">全端開發工程師 & 現代化介面架構師</span>
+            <span class="code-bracket">/&gt;</span>
+          </p>
+
+          <p class="hero-desc">
+            熱愛將複雜邏輯轉化為直覺、流暢且優雅的數位產品體驗。專注於現代化 Web 開發、全端架構整合與高效能互動設計。
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+              <span>探索精選作品</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
+              <span>與我聯繫</span>
+            </a>
+          </div>
+
+          <!-- 快速社群連結 -->
+          <div class="hero-socials">
+            <span class="social-label">社群連結：</span>
+            <a href="https://github.com/ChengLiangHsu" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="mailto:ChengLiangHsu@users.noreply.github.com" class="social-link" title="發送 Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 形象圖 / 頭像區塊 -->
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-wrapper">
+              <img src="assets/avatar.jpg" alt="Cheng-Liang Hsu 個人專業形象照" class="avatar-img" width="360" height="360">
+            </div>
+
+            <!-- 浮動技術徽章 -->
+            <div class="floating-badge badge-react">
+              <span class="badge-icon">⚡</span>
+              <span class="badge-text">React & Next.js</span>
+            </div>
+            <div class="floating-badge badge-node">
+              <span class="badge-icon">🚀</span>
+              <span class="badge-text">Full-Stack Dev</span>
+            </div>
+            <div class="floating-badge badge-clean">
+              <span class="badge-icon">✨</span>
+              <span class="badge-text">Clean Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 關於我 (About Me Section) -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ABOUT ME</span>
+          <h2 class="section-title">熱忱、嚴謹與專注價值的開發者</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story glass-card">
+            <h3 class="story-title">專注於打造兼具「架構穩健」與「極致體驗」的軟體產品</h3>
+            <p>
+              我是 <strong>許丞諒 (Cheng-Liang Hsu)</strong>，一名熱衷於現代 Web 技術與全端架構的工程師。從基礎扎實的程式思維出發，致力於將敏捷開發理念、模組化架構與前沿使用者體驗融合於每一個專案。
+            </p>
+            <p>
+              我深信「優秀的代碼是寫給人看的，只是恰好機器能執行」。在團隊中，我重視程式可維護性、清楚的技術文檔與順暢的跨領域溝通；在產品上，則對微互動細節、效能評估 (Core Web Vitals) 及響應式體驗有著高標準要求。
+            </p>
+
+            <!-- 核心標籤 -->
+            <div class="about-tags">
+              <span class="tag-item">全端架構規劃</span>
+              <span class="tag-item">模組化元件設計</span>
+              <span class="tag-item">效能優化 (Web Vitals)</span>
+              <span class="tag-item">敏捷協作思維</span>
+              <span class="tag-item">持續學習創新</span>
+            </div>
+          </div>
+
+          <!-- 關鍵數據統計 -->
+          <div class="about-stats">
+            <div class="stat-card glass-card">
+              <div class="stat-number gradient-text" data-count="3">3+</div>
+              <div class="stat-title">年軟體開發經驗</div>
+              <div class="stat-desc">涵蓋前端、後端與雲端串接</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number gradient-text" data-count="18">18+</div>
+              <div class="stat-title">個完成專案</div>
+              <div class="stat-desc">SaaS 平台、工具與元件庫</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number gradient-text" data-count="100">100%</div>
+              <div class="stat-title">技術投入與熱情</div>
+              <div class="stat-desc">熱愛探索與擁抱技術革新</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-number gradient-text" data-count="99">99.9%</div>
+              <div class="stat-title">品質與細節追求</div>
+              <div class="stat-desc">嚴謹的代碼審查與測試驗證</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能專長 (Skills Section) -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TECH STACK</span>
+          <h2 class="section-title">專業技術領域與工具庫</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-container">
+          <!-- 技能類別 1: 前端開發 -->
+          <div class="skill-category glass-card">
+            <div class="category-header">
+              <div class="category-icon icon-frontend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="category-title">前端開發 (Frontend)</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML5 / Modern CSS3 / SCSS</span>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript (ES6+) / TypeScript</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">React.js / Next.js 生態系</span>
+                  <span class="skill-level">88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">響應式設計 (RWD) & 網頁動效</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 技能類別 2: 後端與資料庫 -->
+          <div class="skill-category glass-card">
+            <div class="category-header">
+              <div class="category-icon icon-backend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="category-title">後端與資料庫 (Backend)</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js / Express</span>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python / FastAPI</span>
+                  <span class="skill-level">82%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 82%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL / MySQL / MongoDB</span>
+                  <span class="skill-level">80%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">RESTful API & 安全性防護</span>
+                  <span class="skill-level">88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 技能類別 3: 工具與維運工程 -->
+          <div class="skill-category glass-card">
+            <div class="category-header">
+              <div class="category-icon icon-tools">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3 class="category-title">工具與維運 (DevOps & Tools)</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Git / GitHub 版本控制協作</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Docker 容器化管理</span>
+                  <span class="skill-level">78%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 78%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CI/CD 自動化建置流程</span>
+                  <span class="skill-level">75%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Vite / Webpack 工程化打包</span>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精選作品集 (Projects Section) -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PORTFOLIO</span>
+          <h2 class="section-title">精選專案與實作成果</h2>
+          <p class="section-subtitle">點選作品可查看技術架構與亮點功能</p>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- 分類過濾標籤 -->
+        <div class="filter-wrapper" role="tablist" aria-label="作品分類篩選">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">全部專案</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">全端架構</button>
+          <button class="filter-btn" data-filter="ai-tools" role="tab" aria-selected="false">AI 創新應用</button>
+          <button class="filter-btn" data-filter="ui-ux" role="tab" aria-selected="false">介面與元件庫</button>
+        </div>
+
+        <!-- 專案卡片網格 -->
+        <div class="projects-grid">
+          <!-- 專案 1: Nebula SaaS 雲端即時數據分析平台 -->
+          <article class="project-card glass-card" data-category="fullstack">
+            <div class="project-img-wrapper">
+              <img src="assets/project-1.jpg" alt="Nebula SaaS 雲端即時數據分析平台預覽" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" data-project="1">查看專案細節</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge-tag">Full-Stack</span>
+                <span class="badge-tag">Cloud</span>
+              </div>
+              <h3 class="project-title">Nebula Analytics - 雲端數據即時監控儀表板</h3>
+              <p class="project-desc">
+                專為企業級分散式架構打造的即時監控 SaaS 平台，具備多源資料流整合、計算成本追蹤與動態可視化圖表分析。
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">TailwindCSS</span>
+              </div>
+              <div class="project-footer">
+                <a href="#contact" class="project-link">
+                  <span>線上展示</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/ChengLiangHsu" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <span>GitHub 原始碼</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 專案 2: Lumina AI Prompt 智能工作台 -->
+          <article class="project-card glass-card" data-category="ai-tools">
+            <div class="project-img-wrapper">
+              <img src="assets/project-2.jpg" alt="Lumina Copilot AI 智能提示詞工作台預覽" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" data-project="2">查看專案細節</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge-tag">AI & Tools</span>
+                <span class="badge-tag">Productivity</span>
+              </div>
+              <h3 class="project-title">Lumina Copilot - 智慧提示詞與代碼生成工作台</h3>
+              <p class="project-desc">
+                串接大型語言模型 (LLM)，專為開發者設計的提示詞調校與代碼生成工作台，支援版本歷程追蹤與上下文變數管理。
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">FastAPI</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">Vue.js</span>
+              </div>
+              <div class="project-footer">
+                <a href="#contact" class="project-link">
+                  <span>線上展示</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/ChengLiangHsu" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <span>GitHub 原始碼</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 專案 3: Core UI 現代化無障礙元件庫 -->
+          <article class="project-card glass-card" data-category="ui-ux">
+            <div class="project-img-wrapper">
+              <img src="assets/project-3.jpg" alt="Core UI 現代化元件設計系統預覽" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" data-project="3">查看專案細節</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge-tag">UI/UX</span>
+                <span class="badge-tag">Design System</span>
+              </div>
+              <h3 class="project-title">Core UI - 現代化無障礙前端設計系統</h3>
+              <p class="project-desc">
+                遵循 WAI-ARIA 無障礙標準的高彈性元件庫，內建流暢微互動動畫、深淺色主題 token 系統與完整的開發文檔。
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">Web Components</span>
+                <span class="tech-chip">CSS Variables</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">Storybook</span>
+              </div>
+              <div class="project-footer">
+                <a href="#contact" class="project-link">
+                  <span>線上展示</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/ChengLiangHsu" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <span>GitHub 原始碼</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 經歷歷程 (Experience & Timeline Section) -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TIMELINE</span>
+          <h2 class="section-title">學習歷程與經歷里程碑</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- 項目 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-period">2024 — 至今</span>
+              <h3 class="timeline-title">全端開發與架構工程師</h3>
+              <span class="timeline-org">創新科技專案 / 獨立軟體開發</span>
+              <p class="timeline-desc">
+                主導多項現代化 Web 應用程式開發，建構高吞吐量後端 API 與響應式前端介面；落實 CI/CD 自動化測試與部屬，提升系統可靠度與代碼品質。
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-item">React</span>
+                <span class="tag-item">Node.js</span>
+                <span class="tag-item">Docker</span>
+                <span class="tag-item">系統架構</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 項目 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-period">2023 — 2024</span>
+              <h3 class="timeline-title">軟體開發實習工程師</h3>
+              <span class="timeline-org">企業軟體研發團隊</span>
+              <p class="timeline-desc">
+                參與企業內部後台管理系統重構，將傳統單體架構模組化。協助撰寫單元測試覆蓋率超過 85%，並針對資料庫複雜查詢進行效能調校。
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-item">TypeScript</span>
+                <span class="tag-item">Express</span>
+                <span class="tag-item">PostgreSQL</span>
+                <span class="tag-item">RESTful</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 項目 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-period">2021 — 2024</span>
+              <h3 class="timeline-title">資訊與軟體工程學歷養成</h3>
+              <span class="timeline-org">高等學術教育機構</span>
+              <p class="timeline-desc">
+                深耕計算機科學核心基礎（演算法、資料結構、作業系統、網路協議與資料庫原理）。期間積極投入開源專案與校園黑客松競賽，獲取實戰協作經驗。
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-item">計算機科學</span>
+                <span class="tag-item">資料結構</span>
+                <span class="tag-item">網路協議</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡我 (Contact Section) -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">與我聯繫交流</h2>
+          <p class="section-subtitle">期待與您探討專案合作、技術觀點或探索未來的可能性！</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- 聯絡資訊卡片 -->
+          <div class="contact-info-cards">
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-content">
+                <h3 class="info-title">電子信箱 (Email)</h3>
+                <p class="info-value">ChengLiangHsu@users.noreply.github.com</p>
+                <button class="copy-email-btn" id="copy-email-btn" title="複製 Email 地址">
+                  <span id="copy-btn-text">點擊複製 Email</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="info-content">
+                <h3 class="info-title">GitHub 平台</h3>
+                <p class="info-value">github.com/ChengLiangHsu</p>
+                <a href="https://github.com/ChengLiangHsu" target="_blank" rel="noopener noreferrer" class="info-link">前往個人檔案 ↗</a>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-content">
+                <h3 class="info-title">工作據點</h3>
+                <p class="info-value">台灣 (Taiwan)</p>
+                <span class="info-badge">支援現場 / 遠端工作 (Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 互動式聯絡表單 -->
+          <div class="contact-form-wrapper glass-card">
+            <h3 class="form-title">即時發送留言訊息</h3>
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">您的稱呼 / 姓名 <span class="required">*</span></label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="例如：林先生 / Alex" required>
+                <span class="error-msg" id="name-error">請填寫您的稱呼</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">電子信箱 <span class="required">*</span></label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="例如：alex@example.com" required>
+                <span class="error-msg" id="email-error">請填寫有效的電子信箱格式</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">主旨</label>
+                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="例如：專案合作諮詢 / 技術交流">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">訊息內容 <span class="required">*</span></label>
+                <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="請在此留下您的需求或想法..." required></textarea>
+                <span class="error-msg" id="message-error">請輸入訊息內容</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span class="btn-text">發送訊息</span>
+                <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <div class="spinner" id="form-spinner" style="display: none;"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 專案詳情彈跳視窗 (Project Modal) -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close" id="modal-close" aria-label="關閉彈出視窗">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- 動態填入專案細節 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 訊息通知 (Feedback Alert) -->
+  <div class="toast-container" id="toast" role="alert" aria-live="assertive">
+    <div class="toast-content">
+      <svg class="toast-icon success-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <span class="toast-text" id="toast-text">訊息已成功送出！</span>
+    </div>
+  </div>
+
+  <!-- 回到頂部按鈕 -->
+  <button id="back-to-top" class="back-to-top" aria-label="回到頁面頂端" title="回到頂部">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <!-- 頁尾 (Footer) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-code">&lt;CLH/&gt;</span>
+        <span class="footer-name">Cheng-Liang Hsu (許丞諒)</span>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Cheng-Liang Hsu. 精心設計與全端實作。保留所有權利。
+      </p>
+      <div class="footer-links">
+        <a href="#hero">首頁</a>
+        <a href="#about">關於</a>
+        <a href="#projects">專案</a>
+        <a href="#contact">聯絡</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
