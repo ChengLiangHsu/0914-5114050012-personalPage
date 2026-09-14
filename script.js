@@ -381,4 +381,34 @@ document.addEventListener('DOMContentLoaded', () => {
       toast.classList.remove('show');
     }, 3500);
   }
+
+  // 10. JavaScript 即時時鐘 (Live Clock)
+  function initLiveClock() {
+    const dateElem = document.getElementById('live-clock-date');
+    const timeElem = document.getElementById('live-clock-time');
+    if (!timeElem) return;
+
+    function tick() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const dayNames = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
+      const dayStr = dayNames[now.getDay()];
+
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      if (dateElem) {
+        dateElem.textContent = `${year}/${month}/${day} (${dayStr})`;
+      }
+      timeElem.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  initLiveClock();
 });
