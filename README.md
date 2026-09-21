@@ -4,6 +4,18 @@
 
 🔗 **線上展示網址 (GitHub Pages)**：[https://chenglianghsu.github.io/0914-5114050012-personalPage/](https://chenglianghsu.github.io/0914-5114050012-personalPage/)
 
+---
+
+## 📷 網頁預覽 (Website Preview)
+
+### 🌙 深色模式 (Dark Mode)
+![個人作品集首頁預覽 - 深色模式](assets/preview-dark.png)
+
+### ☀️ 淺色模式 (Light Mode)
+![個人作品集首頁預覽 - 淺色模式](assets/preview-light.png)
+
+---
+
 ## 專案簡介
 
 本專案採用純原生技術（Vanilla HTML5、CSS3、JavaScript ES6+）打造，無須繁瑣框架與建置步驟即可快速預覽與部署。
@@ -24,7 +36,11 @@
 ├── index.html       # 網頁主架構與語意化內容
 ├── style.css        # 樣式表、設計 Tokens 與 RWD 佈局
 ├── script.js        # 互動行為、主題切換與表單邏輯
-├── assets/          # 形象頭像與專案成果展示圖檔
+├── assets/          # 形象頭像、專案成果圖檔與網頁預覽截圖
+│   ├── preview-dark.png   # 深色主題預覽圖
+│   ├── preview-light.png  # 淺色主題預覽圖
+│   ├── avatar.jpg         # 個人形象照片
+│   └── project-*.jpg      # 精選專案展示圖
 └── README.md        # 專案說明文件
 ```
 
